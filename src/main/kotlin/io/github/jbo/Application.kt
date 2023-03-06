@@ -1,9 +1,9 @@
 package io.github.jbo
 
-import io.github.jbo.plugins.configureHTTP
-import io.github.jbo.plugins.configureMonitoring
-import io.github.jbo.plugins.configureRouting
-import io.github.jbo.plugins.configureSerialization
+import io.github.jbo.shell.plugins.configureHTTP
+import io.github.jbo.shell.plugins.configureMonitoring
+import io.github.jbo.shell.plugins.configureRouting
+import io.github.jbo.shell.plugins.configureSerialization
 import io.ktor.server.application.Application
 import io.ktor.server.engine.embeddedServer
 import io.ktor.server.netty.Netty

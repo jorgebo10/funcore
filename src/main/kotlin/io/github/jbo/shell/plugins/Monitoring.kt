@@ -1,4 +1,4 @@
-package io.github.jbo.plugins
+package io.github.jbo.shell.plugins
 
 import io.ktor.http.HttpHeaders
 import io.ktor.server.application.Application

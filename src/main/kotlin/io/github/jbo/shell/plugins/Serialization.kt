@@ -1,4 +1,4 @@
-package io.github.jbo.plugins
+package io.github.jbo.shell.plugins
 
 import com.fasterxml.jackson.databind.SerializationFeature
 import io.ktor.serialization.jackson.jackson

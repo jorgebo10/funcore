@@ -1,6 +1,6 @@
 @file:OptIn(ExperimentalCoroutinesApi::class)
 
-package com.jbo.mshell
+package io.github.jbo
 
 import io.github.jbo.core.InvalidStatusDomainError
 import io.github.jbo.core.NoDomainError
