@@ -1,10 +1,11 @@
+---
 openapi: "3.0.3"
 info:
   title: "JSON API sample"
   description: "A JSON API that allows you to view and add customers"
   version: "1.0.0"
 servers:
-  - url: "http://0.0.0.0:8080"
+- url: "http://0.0.0.0:8080"
 paths:
   /customer:
     post:
@@ -30,11 +31,11 @@ paths:
     get:
       description: "Returns a customer by its ID"
       parameters:
-        - name: "id"
-          in: "path"
-          required: true
-          schema:
-            type: "string"
+      - name: "id"
+        in: "path"
+        required: true
+        schema:
+          type: "string"
       responses:
         "200":
           description: "OK"

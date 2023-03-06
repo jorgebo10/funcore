@@ -3,3 +3,6 @@
 /build/
 /build/classes/kotlin/main/
 /build/classes/kotlin/test/
+/docs/.swagger-codegen/
+/docs/.swagger-codegen-ignore
+/docs/index.html
