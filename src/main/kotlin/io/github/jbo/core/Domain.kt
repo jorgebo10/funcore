@@ -1,9 +1,8 @@
-package com.jbo.core
+package io.github.jbo.core
 
 import arrow.core.Either
 import arrow.core.left
 import arrow.core.right
-
 
 @JvmInline
 value class ReservationId(val value: String) {
@@ -13,7 +12,11 @@ value class ReservationId(val value: String) {
 }
 
 enum class ReservationStatus {
-    BOOKED, CONFIRMED, PAID, CANCELLED, ISSUED
+    BOOKED,
+    CONFIRMED,
+    PAID,
+    CANCELLED,
+    ISSUED,
 }
 
 data class Reservation(
@@ -40,7 +43,6 @@ data class Reservation(
     }
 }
 
-
 sealed interface ReservationDomainError
 
 @JvmInline
@@ -50,7 +52,8 @@ value class ReservationNotFoundDomainError private constructor(val reservationId
 
         fun fromId(id: String) = ReservationNotFoundDomainError(ReservationId(id))
 
-        fun fromReservationId(reservationId: ReservationId) = ReservationNotFoundDomainError(reservationId)
+        fun fromReservationId(reservationId: ReservationId) =
+            ReservationNotFoundDomainError(reservationId)
     }
 }
 
@@ -68,7 +71,4 @@ fun payReservation(reservation: Reservation): Either<ReservationDomainError, Res
     }
 
 fun createReservation(reservationId: ReservationId) =
-    Reservation(
-        reservationId,
-        ReservationStatus.BOOKED
-    )
+    Reservation(reservationId, ReservationStatus.BOOKED)
